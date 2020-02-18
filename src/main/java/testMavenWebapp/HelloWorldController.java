@@ -7,13 +7,13 @@ import org.springframework.web.servlet.ModelAndView;
  
 @Controller
 public class HelloWorldController {
-	String message = "Welcome to test file...";
+	String message = "Welcome to test file... Hello World! ";
 	 
 	@RequestMapping("/hello")
 	public ModelAndView showMessage (
 			@RequestParam(value = "name", required = false, defaultValue = "World") String name) {
 		
-		System.out.println("In hello world controller");
+		System.out.println("In hello world controller...");
  
 		ModelAndView mv = new ModelAndView("helloworld");
 		mv.addObject("message", message);
